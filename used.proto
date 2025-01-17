@@ -1,0 +1,814 @@
+syntax = "proto3";
+
+message Gateserver {
+	int64 ggebffojfoi = 10;
+	string hocmaflgeoa = 1969;
+	bool unk1 = 1202;
+	repeated string deneifflcma = 349;
+	string pgcmeddbdch = 1699;
+	string lmamanegbbn = 1609;
+	string fgnndfalbln = 1725;
+	string lpfhmneopol = 789;
+	string galkkoiljgj = 1663;
+	string amkdaaaefom = 1837;
+	string ieodbfnbpce = 5;
+	uint32 nnjkidddaca = 900;
+	string idlpmplagme = 539;
+	string ex_resource_url = 4;
+	bool unk2 = 13;
+	uint32 port = 15;
+	string pdpjjpcpgog = 1443;
+	uint32 jgonjgpgmai = 1377;
+	string iafcgifnncg = 745;
+	string gnbdmeiebog = 805;
+	bool unk3 = 1482;
+	uint32 retcode = 1;
+	bool unk4 = 647;
+	string cdlnbndddfj = 838;
+	bool unk5 = 8;
+	string ifix_url = 1859;
+	bool unk6 = 263;
+	string ip = 2;
+	string asset_bundle_url = 14;
+	string gdfkcejfimo = 197;
+	bool unk7 = 1033;
+	bool use_tcp = 116;
+	string lua_url = 7;
+	string jfkldioionh = 1121;
+	bool unk9 = 397;
+	string ngbhmfoledl = 1836;
+	bool unk10 = 1368;
+	string edfhdalmaaf = 264;
+	string nffaihjplal = 829;
+	string idgefnfdfdj = 194;
+	string hmmlpdepaah = 87;
+	string bdkcfbjplhd = 1394;
+	string nedoaabgifp = 1103;
+	string djbceejcpad = 97;
+	string bbkknoodlcm = 181;
+	string lua_version = 505;
+	string mhnmehekcdg = 1841;
+	string edegoipbplm = 1118;
+	uint32 lenedjnhjmj = 12;
+	string msg = 11;
+	string cbollhmcbha = 2019;
+	bool unk11 = 908;
+	bool unk12 = 1436;
+	uint32 iefgpeckccp = 904;
+	string pnfcemakiha = 1621;
+	int64 edikgmjkmic = 9;
+	string mmdbkmgecee = 1965;
+	string dpiipkocgdl = 6;
+	bool unk13 = 164;
+	bool unk14 = 790;
+	uint32 nmpdjcmmckm = 3;
+	string eoobpfjobbo = 1806;
+	bool unk15 = 1533;
+}
+
+message ServerData {
+	string name = 1;
+	string title = 2;
+	string dispatch_url = 3;
+	string env_type = 4;
+	string display_name = 5;
+	string msg = 6;
+}
+
+message GlobalDispatchData {
+	uint32 retcode = 1;
+	string msg = 2;
+	string top_sever_region_name = 3;
+	repeated ServerData server_list = 4;
+	string stop_desc = 5;
+}
+
+message PlayerGetTokenCsReq {
+	uint32 fclcccnbdlb = 3;
+	uint32 uid = 1;
+	uint32 platform = 13;
+	uint32 aodjndcpdid = 15;
+	string account_uid_wrong = 2;
+	uint32 ghkpbpdfijh = 9;
+	string account_uid = 5;
+	string token = 7;
+}
+
+message BlackInfo {
+	int64 begin_time = 1;
+	int64 end_time = 2;
+	uint32 limit_level = 3;
+	uint32 ban_type = 4;
+}
+
+message PlayerGetTokenScRsp {
+	uint64 secret_key_seed = 9;
+	BlackInfo black_info = 1;
+	uint32 uid = 15;
+	string msg = 14;
+	uint32 retcode = 11;
+}
+
+message ExtraDeviceInfo {
+	string mmfbanghmhl = 1;
+	string mdomlikdlih = 2;
+	string jbocchafhlh = 3;
+	string oeomjechnbi = 4;
+	string meiegkjddcb = 5;
+	string bhndmmdkfee = 6;
+	string mac = 7;
+}
+
+enum PlatformType {
+	EDITOR = 0;
+	IOS = 1;
+	ANDROID = 2;
+	PC = 3;
+	WEB = 4;
+	WAP = 5;
+	PS4 = 6;
+	NINTENDO = 7;
+	CLOUD_ANDROID = 8;
+	CLOUD_PC = 9;
+	CLOUD_IOS = 10;
+	PS5 = 11;
+	MAC = 12;
+	CLOUD_MAC = 13;
+	CLOUD_WEB_ANDROID = 20;
+	CLOUD_WEB_IOS = 21;
+	CLOUD_WEB_PC = 22;
+	CLOUD_WEB_MAC = 23;
+	CLOUD_WEB_TOUCH = 24;
+	CLOUD_WEB_KEYBOARD = 25;
+}
+
+enum LanguageType {
+	LANGUAGE_NONE = 0;
+	LANGUAGE_SC = 1;
+	LANGUAGE_TC = 2;
+	LANGUAGE_EN = 3;
+	LANGUAGE_KR = 4;
+	LANGUAGE_JP = 5;
+	LANGUAGE_FR = 6;
+	LANGUAGE_DE = 7;
+	LANGUAGE_ES = 8;
+	LANGUAGE_PT = 9;
+	LANGUAGE_RU = 10;
+	LANGUAGE_TH = 11;
+	LANGUAGE_VI = 12;
+	LANGUAGE_ID = 13;
+}
+
+message PlayerLoginCsReq {
+	string apejgcgcdnk = 1040;
+	string client_version = 4;
+	string gehpjdmaeeo = 3;
+	string eaoiadcplni = 13;
+	uint32 ejpgnpnmnme = 6;
+	string keckllnpnmc = 450;
+	string pggemchdkgm = 10;
+	string rogue_get_info = 8;
+	uint32 ghkpbpdfijh = 1261;
+	string dmbaimcnhkk = 15;
+	ExtraDeviceInfo hjbdiepmfcc = 1352;
+	uint64 login_random = 5;
+	string mjbmnloijan = 12;
+	string pdciladmjij = 1933;
+	string aeohjingifk = 867;
+	string bokafhimcen = 1291;
+	string aalpfdjnhme = 11;
+	uint32 client_res_version = 9;
+	string iacjlnhkfjl = 1;
+	uint32 mplbcokaihj = 1090;
+	PlatformType platform = 2;
+	uint32 edibgljnojg = 1000;
+	bool ncolnocggph = 170;
+	string oohnmkaogcl = 1640;
+	string signature = 14;
+	LanguageType dgdpjgplkhm = 7;
+	bool lnpeccbkbeb = 304;
+}
+
+message PlayerBasicInfo {
+	string nickname = 1;
+	uint32 level = 2;
+	uint32 exp = 3;
+	uint32 stamina = 4;
+	uint32 mcoin = 5;
+	uint32 hcoin = 6;
+	uint32 scoin = 7;
+	uint32 world_level = 8;
+}
+
+message PlayerLoginScRsp {
+	uint64 server_timestamp_ms = 7;
+	bool jddcochbnpg = 2;
+	bool goepmaljcmi = 11;
+	uint64 login_random = 1;
+	uint32 stamina = 6;
+	string lbfcfnidiae = 5;
+	uint32 retcode = 13;
+	string gepmpieohim = 14;
+	PlayerBasicInfo basic_info = 10;
+	int32 cur_timezone = 8;
+}
+
+message PlayerLoginFinishCsReq {
+}
+
+message PlayerLoginFinishScRsp {
+	uint32 retcode = 14;
+}
+
+message ClientUploadData {
+	string tag = 1;
+	string value = 2;
+}
+
+message PlayerHeartBeatCsReq {
+	uint64 client_time_ms = 6;
+	ClientUploadData dopanlaafjf = 14;
+	uint32 bccloioaphm = 1;
+}
+
+message ClientDownloadData {
+	uint32 version = 1;
+	int64 time = 2;
+	bytes data = 3;
+	//uint32 ghkpbpdfijh = 4;
+}
+
+message PlayerHeartBeatScRsp {
+	uint64 server_time_ms = 1;
+	uint64 client_time_ms = 8;
+	uint32 retcode = 15;
+	ClientDownloadData download_data = 12;
+}
+
+message GetBasicInfoCsReq {
+}
+
+message PlayerSettingInfo {
+	bool ebephgldcnh = 14;
+	bool kmcckimhbbj = 13;
+	bool oigipmeoekb = 15;
+	bool kofdeoaglgk = 4;
+	bool kkhhcopengm = 5;
+	bool khkaapacgjf = 6;
+	bool efccddmnmlp = 1;
+	bool kmacdmafffn = 8;
+	bool meffkcapbfj = 10;
+	bool denfljkhnfo = 12;
+}
+
+message GetBasicInfoScRsp {
+	uint32 WeekCocoonFinishedCount = 10;
+	uint32 Gender = 14;
+	int64 LastSetNicknameTime = 6;
+	uint32 CurDay = 4;
+	PlayerSettingInfo PlayerSettingInfo = 15;
+	int64 NextRecoverTime = 3;
+	bool IsGenderSet = 8;
+	uint32 GameplayBirthday = 5;
+	uint32 retcode = 2;
+	uint32 ExchangeTimes = 1;
+}
+
+message GetAvatarDataCsReq {
+	repeated uint32 base_avatar_id_list = 4;
+	bool is_get_all = 3;
+}
+
+message EquipRelic {
+	uint32 type = 9;
+	uint32 relic_unique_id = 2;
+}
+
+message AvatarSkillTree {
+	uint32 point_id = 1;
+	uint32 level = 2;
+}
+
+message Avatar {
+	uint64 first_met_time_stamp = 7;
+	repeated EquipRelic equip_relic_list = 8;
+	uint32 exp = 1;
+	uint32 equipment_unique_id = 12;
+	uint32 rank = 15;
+	uint32 level = 2;
+	repeated AvatarSkillTree skilltree_list = 4;
+	bool is_marked = 5;
+	repeated uint32 has_taken_reward_level_list = 11;
+	uint32 dressed_skin_id = 13;
+	uint32 promotion = 14;
+	uint32 base_avatar_id = 9;
+}
+
+message GetAvatarDataScRsp {
+	uint32 pkmghnblipb = 15;
+	bool is_get_all = 5;
+	uint32 retcode = 6;
+	repeated uint32 oicjbbphanb = 10;
+	repeated Avatar avatar_list = 4;
+}
+
+message GetMultiPathAvatarInfoCsReq {
+}
+
+enum MultiPathAvatarType {
+	MultiPathAvatarTypeNone = 0;
+	Mar_7thKnightType = 1001;
+	Mar_7thRogueType = 1224;
+	BoyWarriorType = 8001;
+	GirlWarriorType = 8002;
+	BoyKnightType = 8003;
+	GirlKnightType = 8004;
+	BoyShamanType = 8005;
+	GirlShamanType = 8006;
+	BoyMemoryType = 8007;
+	GirlMemoryType = 8008;
+}
+
+message MultiPathAvatarInfo {
+	uint32 rank = 5;
+	MultiPathAvatarType avatar_id = 3;
+	uint32 path_equipment_id = 6;
+	repeated AvatarSkillTree multi_path_skill_tree = 13;
+	repeated EquipRelic equip_relic_list = 9;
+}
+
+message GetMultiPathAvatarInfoScRsp {
+	uint32 retcode = 9;
+	map<uint32, MultiPathAvatarType> cur_avatar_path = 1;
+	repeated uint32 basic_type_id_list = 12;
+	repeated MultiPathAvatarInfo multi_path_avatar_info_list = 14;
+}
+
+message GetBagCsReq {
+}
+
+message PileItem {
+	uint32 ItemNum = 15;
+	uint32 ItemId = 12;
+}
+
+message Equipment {
+	uint32 level = 9;
+	uint32 equip_avatar_id = 10;
+	uint32 tid = 6;
+	uint32 exp = 4;
+	uint32 promotion = 2;
+	uint32 rank = 12;
+	uint32 unique_id = 1;
+	bool is_protected = 3;
+}
+
+message Material0 {
+	uint64 expire_time = 9;
+	uint32 num = 14;
+	uint32 tid = 10;
+}
+
+message Material {
+	uint64 expire_time = 7;
+	uint32 tid = 14;
+	uint32 num = 6;
+}
+
+message RelicAffix {
+	uint32 affix_id = 1;
+	uint32 cnt = 2;
+	uint32 step = 3;
+}
+
+message Relic {
+	bool is_protected = 10;
+	repeated RelicAffix sub_affix_list = 9;
+	uint32 unique_id = 7;
+	repeated RelicAffix fnnglgifbbe = 15;
+	uint32 level = 4;
+	bool is_discarded = 6;
+	uint32 exp = 11;
+	uint32 tid = 13;
+	uint32 main_affix_id = 12;
+	uint32 equip_avatar_id = 1;
+}
+
+message WaitDelResource {
+	uint32 num = 8;
+	uint32 tid = 3;
+}
+
+enum TurnFoodSwitch {
+	TURN_FOOD_SWITCH_NONE = 0;
+	TURN_FOOD_SWITCH_ATTACK = 1;
+	TURN_FOOD_SWITCH_DEFINE = 2;
+}
+
+message GetBagScRsp {
+	repeated PileItem mdcccjhgfkp = 14;
+	repeated Equipment equipment_list = 2;
+	uint32 retcode = 9;
+	repeated Material0 bplaencojnn = 11;
+	repeated Material gamealbkaad = 10;
+	repeated Material material_list = 4;
+	repeated Relic relic_list = 3;
+	repeated Material0 mokcdmcaknl = 13;
+	repeated uint32 dooakaaicfp = 8;
+	uint32 facgjdachom = 5;
+	repeated WaitDelResource wait_del_resource_list = 15;
+	repeated uint32 bblohhgadgd = 1;
+	repeated TurnFoodSwitch admnoiakief = 12;
+	repeated uint32 jldgljdhecb = 6;
+}
+
+message GetMissionStatusCsReq {
+	repeated uint32 mission_event_id_list = 7;
+	repeated uint32 main_mission_id_list = 8;
+	repeated uint32 sub_mission_id_list = 3;
+}
+
+message MissionCustomValue {
+	uint32 index = 7;
+	uint32 custom_value = 10;
+}
+
+message MissionCustomValueList {
+	repeated MissionCustomValue custom_value_list = 2;
+}
+
+message MainMissionCustomValue {
+	uint32 main_mission_id = 4;
+	MissionCustomValueList custom_value_list = 7;
+}
+
+enum MissionStatus {
+	MISSION_NONE = 0;
+	MISSION_DOING = 1;
+	MISSION_FINISH = 2;
+	MISSION_PREPARED = 3;
+}
+
+message Mission {
+	uint32 id = 13;
+	uint32 progress = 4;
+	MissionStatus status = 5;
+}
+
+message GetMissionStatusScRsp {
+	repeated uint32 DisabledMainMissionIdList = 7;
+	uint32 retcode = 6;
+	repeated MainMissionCustomValue MainMissionMcvList = 12;
+	repeated uint32 UnfinishedMainMissionIdList = 3;
+	repeated Mission MissionEventStatusList = 1;
+	repeated uint32 FinishedMainMissionIdList = 13;
+	repeated Mission SubMissionStatusList = 9;
+	repeated uint32 CurversionFinishedMainMissionIdList = 15;
+}
+
+enum ExtraLineupType {
+	LINEUP_NONE = 0;
+	LINEUP_CHALLENGE = 1;
+	LINEUP_ROGUE = 2;
+	LINEUP_CHALLENGE_2 = 3;
+	LINEUP_CHALLENGE_3 = 4;
+	LINEUP_ROGUE_CHALLENGE = 5;
+	LINEUP_STAGE_TRIAL = 6;
+	LINEUP_ROGUE_TRIAL = 7;
+	LINEUP_ACTIVITY = 8;
+	LINEUP_BOXING_CLUB = 9;
+	LINEUP_TREASURE_DUNGEON = 11;
+	LINEUP_CHESS_ROGUE = 12;
+	LINEUP_HELIOBUS = 13;
+	LINEUP_TOURN_ROGUE = 14;
+	LINEUP_RELIC_ROGUE = 15;
+	LINEUP_ARCADE_ROGUE = 16;
+	LINEUP_MAGIC_ROGUE = 17;
+}
+
+message AmountInfo {
+	uint32 cur_amount = 1;
+	uint32 max_amount = 2;
+}
+
+enum AvatarType {
+	AVATAR_TYPE_NONE = 0;
+	AVATAR_TRIAL_TYPE = 1;
+	AVATAR_LIMIT_TYPE = 2;
+	AVATAR_FORMAL_TYPE = 3;
+	AVATAR_ASSIST_TYPE = 4;
+	AVATAR_AETHER_DIVIDE_TYPE = 5;
+	AVATAR_UPGRADE_AVAILABLE_TYPE = 6;
+}
+
+message LineupAvatar {
+	uint32 id = 3;
+	uint32 slot_type = 4;
+	uint32 hp = 14;
+	AmountInfo sp = 10;
+	uint32 satiety = 6;
+	AvatarType avatar_type = 8;
+}
+
+message LineupInfo {
+	bool pjbjnfnbjon = 6;
+	repeated uint32 jnmdgcjhcjj = 10;
+	repeated uint32 iddndgkoilc = 8;
+	uint32 index = 5;
+	uint32 plane_id = 7;
+	uint32 game_story_line_id = 13;
+	repeated uint32 omagmokjhnm = 11;
+	bool is_virtual = 1;
+	ExtraLineupType extra_lineup_type = 14;
+	uint32 leader_slot = 12;
+	uint32 mp = 3;
+	string name = 15;
+	uint32 max_mp = 9;
+	repeated LineupAvatar avatar_list = 4;
+}
+
+message GetCurLineupDataCsReq {
+}
+
+message GetCurLineupDataScRsp {
+	LineupInfo lineup = 3;
+	uint32 retcode = 7;
+}
+
+message GetAllLineupDataCsReq {
+}
+
+message GetAllLineupDataScRsp {
+	uint32 retcode = 12;
+	uint32 cur_index = 1;
+	repeated LineupInfo lineup_list = 8;
+}
+
+message GetCurSceneInfoCsReq {
+}
+
+message SceneActorInfo {
+	uint32 map_layer = 2;
+	uint32 uid = 14;
+	AvatarType avatar_type = 5;
+	uint32 base_avatar_id = 8;
+}
+
+message HNEBCFCDMPC {
+	bool bbcnhcejfbp = 10;
+	uint32 efdiadoejob = 4;
+	bytes hbblkjgckpf = 9;
+}
+
+message ScenePropInfo {
+	// PropExtraInfo extra_info = 10;
+	uint32 prop_state = 11;
+	HNEBCFCDMPC hmgcoanonll = 13;
+	uint32 prop_id = 3;
+	uint32 life_time_ms = 2;
+	uint64 create_time_ms = 9;
+	repeated string trigger_name_list = 4;
+}
+
+message Vector {
+	sint32 y = 7;
+	sint32 z = 3;
+	sint32 x = 6;
+}
+
+message MotionInfo {
+	Vector rot = 11;
+	Vector pos = 12;
+}
+
+message SceneEntityInfo {
+	SceneActorInfo actor = 11;
+	// SceneNpcMonsterInfo npc_monster = 9;
+	// SceneNpcInfo npc = 13;
+	ScenePropInfo prop = 7;
+	// SceneSummonUnitInfo summon_unit = 4;
+	uint32 entity_id = 2;
+	uint32 group_id = 14;
+	uint32 inst_id = 6;
+	MotionInfo Motion = 10;
+}
+
+message SceneGroupInfo {
+	// map<string, int32> gbnnlkibhon = 9;
+	uint32 group_id = 13;
+	repeated SceneEntityInfo entity_list = 10;
+	uint32 state = 8;
+}
+
+message DLIBJAFBHEA {
+	uint32 hichlooflbd = 2;
+	uint32 pbiablpekob = 15;
+}
+
+message ClientGroupInfo {
+	uint32 group_id = 10;
+	bool is_default = 9;
+	uint32 state = 12;
+}
+
+message SceneInfo {
+	uint32 game_mode_type = 9;
+	// uint32 world_id = 5;
+	repeated SceneGroupInfo scene_group_list = 1301;
+	uint32 game_story_line_id = 27;
+	uint32 entry_id = 14;
+	// repeated EntityBuffInfo entity_buff_info_list = 8;
+	repeated SceneEntityInfo entity_list = 4;
+	uint32 leader_entity_id = 11;
+	uint32 plane_id = 10;
+	// repeated CustomSaveData custom_data_list = 13;
+	// repeated BuffInfo scene_buff_info_list = 2;
+	// MissionStatusBySceneInfo scene_mission_info = 1039;
+	uint32 content_id = 1348;
+	uint32 dimension_id = 1130;
+	map<string, int32> floor_saved_data = 1313;
+	// uint32 world_id = 9;
+	map<uint32, DLIBJAFBHEA> fhlamihooja = 15;
+	repeated uint32 lighten_section_list = 1;
+	uint32 default_pos = 6;
+	uint32 floor_id = 7;
+	repeated ClientGroupInfo client_group_list = 1512;
+	repeated uint32 mglhebhjabe = 1064;
+}
+
+message GetCurSceneInfoScRsp {
+	SceneInfo scene = 1;
+	uint32 retcode = 11;
+}
+
+enum BattleEndStatus {
+	BATTLE_END_NONE = 0;
+	BATTLE_END_WIN = 1;
+	BATTLE_END_LOSE = 2;
+	BATTLE_END_QUIT = 3;
+}
+
+message PVEBattleResultCsReq {
+	uint32 stage_id = 6;
+	uint32 battle_id = 2;
+	BattleEndStatus end_status = 13;
+}
+
+message BattleEquipment {
+	uint32 id = 1;
+	uint32 level = 2;
+	uint32 promotion = 3;
+	uint32 rank = 4;
+}
+
+message BattleRelic {
+	uint32 id = 1;
+	uint32 level = 2;
+	uint32 main_affix_id = 3;
+	repeated RelicAffix sub_affix_list = 4;
+	uint32 unique_id = 5;
+	uint32 set_id = 6;
+	uint32 type = 7;
+	uint32 rarity = 8;
+}
+
+message EPHIOEIMEPB {
+	bool apjgenoipnb = 1;
+	repeated uint32 hbcpoddmcpo = 2;
+	uint32 ojkjhgejlek = 3;
+	uint32 lejnkcjgbec = 4;
+}
+
+message BattleAvatar {
+	AvatarType avatar_type = 1;
+	uint32 id = 2;
+	uint32 level = 3;
+	uint32 rank = 4;
+	uint32 index = 5;
+	repeated AvatarSkillTree skilltree_list = 6;
+	repeated BattleEquipment equipment_list = 7;
+	uint32 hp = 8;
+	uint32 promotion = 10;
+	repeated BattleRelic relic_list = 11;
+	uint32 world_level = 12;
+	uint32 assist_uid = 13;
+	EPHIOEIMEPB nlcjclfgmin = 15;
+	AmountInfo sp = 16;
+	uint32 pgijnibedfo = 17;
+}
+
+message Item {
+	uint32 MainAffixId = 14;
+	uint32 Promotion = 7;
+	uint32 UniqueId = 13;
+	uint32 Level = 8;
+	uint32 ItemId = 9;
+	uint32 Num = 15;
+	uint32 Rank = 2;
+}
+
+message ItemList {
+	repeated Item ItemList_ = 4;
+}
+
+message PVEBattleResultScRsp {
+	string clebbkoiohj = 15;
+	uint32 retcode = 14;
+	BattleEndStatus end_status = 1;
+	uint32 event_id = 10;
+	bool mfjljkcmiol = 4;
+	uint32 gcmfmldnldm = 9;
+	uint32 mismatch_turn_count = 3;
+	uint32 battle_id = 5;
+	ItemList ieinoefbllp = 8;
+	uint32 stage_id = 6;
+	repeated BattleAvatar battle_avatar_list = 7;
+	string lfhbhkhmned = 12;
+	ItemList ifjljadpfdg = 1392;
+	uint32 njghcpijdgi = 13;
+	ItemList cllokodkpap = 2;
+	ItemList eebbmnlacmg = 11;
+}
+
+message StartCocoonStageCsReq {
+	uint32 prop_entity_id = 13;
+	uint32 world_level = 15;
+	uint32 wave = 1;
+	uint32 cocoon_id = 9;
+}
+
+message BattleBuff {
+	uint32 id = 1;
+	uint32 level = 2;
+	uint32 owner_index = 3;
+	uint32 wave_flag = 4;
+	repeated uint32 target_index_list = 5;
+	map<string, float> dynamic_values = 6;
+}
+
+message SceneMonsterData {
+	uint32 cur_hp = 13;
+	uint32 max_hp = 14;
+	uint32 monster_id = 15;
+}
+
+message SceneMonsterWaveParam {
+	uint32 level = 10;
+	uint32 elite_group = 2;
+	uint32 cbiaoplipkj = 5;
+	uint32 hard_level_group = 13;
+}
+
+message SceneMonsterWave {
+	repeated ItemList olfgemadaco = 3;
+	uint32 battle_wave_id = 5;
+	repeated SceneMonsterData monster_list = 1;
+	uint32 battle_stage_id = 15;
+	SceneMonsterWaveParam wave_param = 11;
+}
+
+message SceneBattleInfo {
+	uint32 world_level = 1;
+	// repeated BattleEventBattleInfo battle_event = 928;
+	repeated BattleBuff buff_list = 13;
+	// EvolveBuildBattleInfo adafaohflma = 1079;
+	bool nbgogjjojma = 3;
+	uint32 battle_id = 9;
+	uint32 stage_id = 15;
+	uint32 cycle_count = 14;
+	repeated SceneMonsterWave monster_wave_list = 4;
+	// BattleRogueMagicInfo battle_rogue_magic_info = 1993;
+	repeated BattleAvatar battle_avatar_list = 10;
+	// OLGKJDLMEIO gddalcgoobg = 796;
+	// map<uint32, BattleTargetList> battle_target_info = 1840;
+	uint32 logic_random_seed = 12;
+	uint32 makigfemknm = 5;
+	// NMKAECDMHOP igpipnaaebj = 1824;
+}
+
+message StartCocoonStageScRsp {
+	SceneBattleInfo BattleInfo = 2;
+	uint32 cocoon_id = 5;
+	uint32 prop_entity_id = 11;
+	uint32 wave = 10;
+	uint32 retcode = 6;
+}
+
+message EntityMotion {
+	bool kkbdjdlhmkf = 14;
+	uint32 map_layer = 4;
+	uint32 entity_id = 2;
+	MotionInfo motion = 11;
+}
+
+message SceneEntityMoveCsReq {
+	uint32 entry_id = 8;
+	uint64 dcmncgdjobj = 15;
+	repeated EntityMotion entity_motion_list = 9;
+}
+
+message SceneEntityMoveScRsp {
+	repeated EntityMotion entity_motion_list = 11;
+	ClientDownloadData download_data = 7;
+	uint32 retcode = 8;
+}

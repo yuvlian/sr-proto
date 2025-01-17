@@ -1,0 +1,18 @@
+[package]
+name = "sr-proto"
+version = "3.0.0"
+edition = "2024"
+authors = ["amizing25", "Lukopa", "Yulian <yuvlian@naver.com>"]
+license = "MIT"
+description = "SR Protobufs & CmdId"
+homepage = "https://github.com/f2pqingque/sr-proto"
+repository = "https://github.com/f2pqingque/sr-proto"
+readme = "README.md"
+
+[dependencies]
+prost = "0.13.4"
+prost-types = "0.13.4"
+
+[build-dependencies]
+prost-build = "0.13.4"
+serde_json = "1.0.135"
