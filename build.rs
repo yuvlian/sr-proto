@@ -38,8 +38,11 @@ fn main() {
             .as_object()
             .expect("JSON file does not contain an object")
             .iter()
-            .map(|(key, value)| {
-                let value = value.as_u64().expect("Invalid value type, expected a number.") as u16;
+            .fold(String::new(), |mut acc, (key, value)| {
+                let value = value
+                    .as_u64()
+                    .expect("Invalid value type, expected a number.")
+                    as u16;
                 let const_name = key
                     .as_str()
                     .chars()
@@ -51,9 +54,9 @@ fn main() {
                         acc
                     })
                     .to_uppercase();
-                format!("pub const {}: u16 = {};\n", const_name, value)
-            })
-            .collect::<String>();
+                acc.push_str(&format!("pub const {}: u16 = {};\n", const_name, value));
+                acc
+            });
 
         let output_path = format!("{}{}", OUTPUT_DIR, CMD_ID_OUTPUT_FILE);
         write(&output_path, constants).expect("Failed to write cmd id output file");
