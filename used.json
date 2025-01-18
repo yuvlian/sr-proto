@@ -14,8 +14,8 @@
     "GetBasicInfoCsReq": 22,
     "GetBasicInfoScRsp": 100,
 
-    "GetAvatarDataCsReq": 22,
-    "GetAvatarDataScRsp": 100,
+    "GetAvatarDataCsReq": 336,
+    "GetAvatarDataScRsp": 395,
 
     "GetMultiPathAvatarInfoCsReq": 66,
     "GetMultiPathAvatarInfoScRsp": 63,
