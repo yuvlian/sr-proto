@@ -1,19 +1,27 @@
-use serde_json::Value;
-use std::fs::{create_dir_all, read_to_string, write};
+use heck::ToShoutySnakeCase;
+use regex::Regex;
+use std::fs::{File, create_dir_all};
+use std::io::{self, Write};
 use std::path::Path;
+use std::sync::LazyLock;
+
+// get cmdids from proto
+static CMD_REGEX: LazyLock<Regex> = LazyLock::new(|| Regex::new(r#"\sCmd\w*\s=\s\d+"#).unwrap());
 
 // If you change these, make sure to change `src/lib.rs`
 // Prost output file is `_.rs`
 const OUTPUT_DIR: &str = "out/";
-const CMD_ID_OUTPUT_FILE: &str = "cmd.rs";
+const CMD_OUT: &str = "./out/cmd.rs";
 
 // Source files
 const PROTO_FILE: &str = "3.proto";
-const CMD_ID_JSON: &str = "3.json";
+// not necessary, i just like preallocating.
+// u can find this by doing a regex search in vscode
+const CMD_LINE_CNT: usize = 1915;
 
-fn main() {
+fn main() ->  io::Result<()> {
     if !Path::new(OUTPUT_DIR).exists() {
-        create_dir_all(OUTPUT_DIR).expect("Failed to create output directory");
+        create_dir_all(OUTPUT_DIR)?;
     }
 
     if Path::new(PROTO_FILE).exists() {
@@ -23,44 +31,36 @@ fn main() {
             .out_dir(OUTPUT_DIR)
             .compile_protos(&[PROTO_FILE], &["."])
             .expect("Failed to compile protobuf");
+
+        let cmd_output = parse_cmd_ids(PROTO_FILE)?;
+
+        let mut file = File::create(CMD_OUT)?;
+
+        writeln!(file, "{}", cmd_output.join("\n"))?;
+
+        Ok(())
     } else {
         panic!("`{}` does not exist", PROTO_FILE);
     }
+}
 
-    if Path::new(CMD_ID_JSON).exists() {
-        println!("cargo::rerun-if-changed={}", CMD_ID_JSON);
+fn parse_cmd_ids(proto: &str) -> io::Result<Vec<String>> {
+    use std::fs::read_to_string;
+    let content = read_to_string(proto)?;
 
-        let json_content = read_to_string(CMD_ID_JSON).expect("Failed to read JSON file");
-        let parsed_json: Value =
-            serde_json::from_str(&json_content).expect("Failed to parse JSON file");
-
-        let constants = parsed_json
-            .as_object()
-            .expect("JSON file does not contain an object")
-            .iter()
-            .fold(String::new(), |mut acc, (key, value)| {
-                let value = value
-                    .as_u64()
-                    .expect("Invalid value type, expected a number.")
-                    as u16;
-                let const_name = key
-                    .as_str()
-                    .chars()
-                    .fold(String::new(), |mut acc, c| {
-                        if c.is_uppercase() && !acc.is_empty() {
-                            acc.push('_');
-                        }
-                        acc.push(c);
-                        acc
-                    })
-                    .to_uppercase();
-                acc.push_str(&format!("pub const {}: u16 = {};\n", const_name, value));
-                acc
-            });
-
-        let output_path = format!("{}{}", OUTPUT_DIR, CMD_ID_OUTPUT_FILE);
-        write(&output_path, constants).expect("Failed to write cmd id output file");
-    } else {
-        panic!("`{}` does not exist", CMD_ID_JSON);
+    let mut results = Vec::with_capacity(CMD_LINE_CNT);
+    for cap in CMD_REGEX.captures_iter(&content) {
+        if let Some(matched) = cap.get(0) {
+            let cmd_line = matched.as_str();
+            let stripped = cmd_line.replace("\tCmd", "");
+            let parts: Vec<&str> = stripped.split(" = ").collect();
+            if parts.len() == 2 {
+                let constant_name = parts[0].to_shouty_snake_case();
+                let value = parts[1];
+                results.push(format!("pub const {}: u16 = {};", constant_name, value));
+            }
+        }
     }
+
+    Ok(results)
 }

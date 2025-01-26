@@ -2717,46 +2717,6 @@ message QuickStartFarmElementScRsp {
 	uint32 kidmdefnaak = 1;
 }
 
-// NBIBIGCACMG
-// 2.7.51
-// enum CmdAetherDivideType {
-// 	CmdAetherDivideTypeNone = 0;
-// 	CmdAetherDivideSpiritExpUpCsReq = 4859;
-// 	CmdSwitchAetherDivideLineUpSlotCsReq = 4826;
-// 	CmdGetAetherDivideInfoCsReq = 4834;
-// 	CmdGetAetherDivideChallengeInfoCsReq = 4829;
-// 	CmdEnterAetherDivideSceneScRsp = 4895;
-// 	CmdSetAetherDivideLineUpCsReq = 4846;
-// 	CmdAetherDivideSpiritExpUpScRsp = 4812;
-// 	CmdAetherDivideSkillItemScNotify = 4858;
-// 	CmdLeaveAetherDivideSceneScRsp = 4827;
-// 	CmdAetherDivideRefreshEndlessCsReq = 4835;
-// 	CmdAetherDivideSpiritInfoScNotify = 4878;
-// 	CmdEquipAetherDividePassiveSkillCsReq = 4896;
-// 	CmdStartAetherDivideChallengeBattleCsReq = 4852;
-// 	CmdStartAetherDivideStageBattleCsReq = 4853;
-// 	CmdGetAetherDivideChallengeInfoScRsp = 4850;
-// 	CmdAetherDivideRefreshEndlessScNotify = 4817;
-// 	CmdClearAetherDividePassiveSkillCsReq = 4875;
-// 	CmdStartAetherDivideSceneBattleScRsp = 4828;
-// 	CmdAetherDivideTainerInfoScNotify = 4888;
-// 	CmdAetherDivideFinishChallengeScNotify = 4848;
-// 	CmdClearAetherDividePassiveSkillScRsp = 4819;
-// 	CmdAetherDivideRefreshEndlessScRsp = 4873;
-// 	CmdAetherDivideTakeChallengeRewardCsReq = 4813;
-// 	CmdAetherDivideLineupScNotify = 4876;
-// 	CmdStartAetherDivideSceneBattleCsReq = 4867;
-// 	CmdStartAetherDivideChallengeBattleScRsp = 4874;
-// 	CmdLeaveAetherDivideSceneCsReq = 4884;
-// 	CmdSetAetherDivideLineUpScRsp = 4825;
-// 	CmdAetherDivideTakeChallengeRewardScRsp = 4821;
-// 	CmdSwitchAetherDivideLineUpSlotScRsp = 4807;
-// 	CmdGetAetherDivideInfoScRsp = 4843;
-// 	CmdEquipAetherDividePassiveSkillScRsp = 4805;
-// 	CmdStartAetherDivideStageBattleScRsp = 4890;
-// 	CmdEnterAetherDivideSceneCsReq = 4836;
-// }
-
 enum CmdAetherDivideType {
 	CmdAetherDivideTypeNone = 0;
 	CmdAetherDivideSpiritExpUpCsReq = 4822;
