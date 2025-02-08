@@ -19,7 +19,7 @@ const PROTO_FILE: &str = "3.proto";
 // u can find this by doing a regex search in vscode
 const CMD_LINE_CNT: usize = 1915;
 
-fn main() ->  io::Result<()> {
+fn main() -> io::Result<()> {
     if !Path::new(OUTPUT_DIR).exists() {
         create_dir_all(OUTPUT_DIR)?;
     }

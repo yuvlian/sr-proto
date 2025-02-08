@@ -1,21 +1,13 @@
-pub use prost::Message as MsgTrait;
+pub use prost::Message;
 
-#[macro_export]
-macro_rules! dec {
-    ($message:ident, $req:ident) => {
-        match $message::decode($req) {
-            Ok(v) => v,
-            Err(e) => {
-                eprintln!("Failed to decode {}", stringify!($message));
-                $message::default()
-            }
-        }
-    };
+pub fn decode<T: Message + Default>(data: &[u8]) -> T {
+    T::decode(data).unwrap_or_else(|_| {
+        println!("!! failed decoding to msg, defaulting !!");
+        T::default()
+    })
 }
 
-pub mod pb {
-    include!("../out/_.rs");
-}
+include!("../out/_.rs");
 
 pub mod cmd {
     include!("../out/cmd.rs");
