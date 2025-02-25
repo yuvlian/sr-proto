@@ -14,7 +14,7 @@ const OUTPUT_DIR: &str = "out/";
 const CMD_OUT: &str = "./out/cmd.rs";
 
 // Source files
-const PROTO_FILE: &str = "3.proto";
+const PROTO_FILE: &str = "3.1.proto";
 // not necessary, i just like preallocating.
 // u can find this by doing a regex search in vscode
 const CMD_LINE_CNT: usize = 1915;
