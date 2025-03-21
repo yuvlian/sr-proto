@@ -1,12 +1,10 @@
 [package]
 name = "sr-proto"
-version = "3.0.0"
+version = "0.1.0"
 edition = "2024"
-authors = ["amizing25", "Lukopa", "Yulian <yuvlian@naver.com>"]
 license = "MIT"
-description = "SR Protobufs & CmdId"
-homepage = "https://github.com/f2pqingque/sr-proto"
-repository = "https://github.com/f2pqingque/sr-proto"
+description = "protobufs, cmdid."
+repository = "https://github.com/yuvlian/sr-proto"
 readme = "README.md"
 
 [dependencies]

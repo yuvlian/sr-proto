@@ -1,21 +1,9 @@
 # sr-proto
-SR Protobufs & CmdId
+protobufs, cmdid. version=3.1.5x
 
-Used for https://github.com/f2pqingque/sr
+used for https://github.com/yuvlian/stalel
 
 NOTE: You will need protoc to compile this.
 
-Current version: 3.0.0
-
-If you want the list of protos needed for a bare minimum PS, here they are:
-
-- PlayerGetToken
-- PlayerLogin
-- PlayerLoginFinish
-- PlayerHeartBeat
-- GetBasicInfo
-- GetAvatarData
-- GetBag
-- GetMissionStatus
-- GetCurLineupData
-- GetCurSceneInfo
+## credits
+- amizing25: protos
