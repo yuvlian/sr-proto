@@ -1,4 +1,4 @@
-pub use prost::Message;
+pub use prost;
 
 include!("../out/_.rs");
 
