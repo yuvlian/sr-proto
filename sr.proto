@@ -12130,13 +12130,11 @@ message SceneSummonUnitInfo {
 	uint32 summon_unit_id = 15;
 }
 message SceneEntityInfo {
-	oneof entityCase_ {
-		SceneActorInfo Actor = 15;
-		SceneNpcMonsterInfo NpcMonster = 7;
-		SceneNpcInfo Npc = 12;
-		ScenePropInfo Prop = 8;
-		SceneSummonUnitInfo SummonUnit = 13;
-	}
+	SceneActorInfo actor = 15;
+	SceneNpcMonsterInfo NpcMonster = 7;
+	SceneNpcInfo npc = 12;
+	ScenePropInfo prop = 8;
+	SceneSummonUnitInfo SummonUnit = 13;
 	MotionInfo Motion = 1;
 	uint32 EntityId = 14;
 	uint32 InstId = 2;
