@@ -1,9 +1,9 @@
 # sr-proto
-protobufs, cmdid. version=3.1.5x
+protobufs, cmdid. version=3.3
 
 used for https://github.com/yuvlian/stalel
 
 NOTE: You will need protoc to compile this.
 
 ## credits
-- amizing25: protos
+- naruse: protos
