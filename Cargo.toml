@@ -8,10 +8,9 @@ repository = "https://github.com/yuvlian/sr-proto"
 readme = "README.md"
 
 [dependencies]
-prost = "0.13.4"
-prost-types = "0.13.4"
+prost = "0.13.5"
 
 [build-dependencies]
-prost-build = "0.13.4"
+prost-build = "0.13.5"
 regex = "1.11.1"
 heck = "0.5.0"
