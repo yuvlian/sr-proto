@@ -1,5 +1,5 @@
 # sr-proto
-protobufs, cmdid. version=3.3
+protobufs, cmdid. version=3.4
 
 used for https://github.com/yuvlian/stalel
 

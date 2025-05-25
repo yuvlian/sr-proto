@@ -1,7 +1,7 @@
 use heck::ToShoutySnakeCase;
 use regex::Regex;
 use std::fs::{File, create_dir_all};
-use std::io::{self, Write, BufRead};
+use std::io::{self, Write};
 use std::path::Path;
 use std::sync::LazyLock;
 
@@ -15,25 +15,13 @@ const CMD_OUT: &str = "./out/cmd.rs";
 
 // Source files
 const PROTO_FILE: &str = "sr.proto";
-const CUR_VERSION: &str = "3.3.0;";
 // not necessary, i just like preallocating.
 // u can find this by doing a regex search in vscode
-const CMD_LINE_CNT: usize = 2100;
+const CMD_LINE_CNT: usize = 3000;
 
 fn main() -> io::Result<()> {
     if !Path::new(OUTPUT_DIR).exists() {
         create_dir_all(OUTPUT_DIR)?;
-    }
-
-    if Path::new(CMD_OUT).exists() {
-        let f = File::open(CMD_OUT)?;
-        let r = io::BufReader::new(f);
-        // check if already prost compiled
-        if let Some(Ok(line)) = r.lines().next() {
-            if line.replace("// ", "") == CUR_VERSION {
-                return Ok(());
-            }
-        }
     }
 
     if Path::new(PROTO_FILE).exists() {
@@ -48,7 +36,6 @@ fn main() -> io::Result<()> {
 
         let mut file = File::create(CMD_OUT)?;
 
-        writeln!(file, "// {}", CUR_VERSION)?;
         writeln!(file, "{}", cmd_output.join("\n"))?;
 
         Ok(())
