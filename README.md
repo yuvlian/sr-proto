@@ -1,9 +1,3 @@
 # sr-proto
-protobufs, cmdid. version=3.4
-
-used for https://github.com/yuvlian/stalel
-
-NOTE: You will need protoc to compile this.
-
-## credits
-- naruse: protos
+THIS REPO IS DEPRECATED!!
+if you want the raw protos, you can get them at https://github.com/yuvlian/qingque-sr/blob/main/pb/StarRail.proto
